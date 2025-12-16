@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import './styles/App.css'
+import { useState } from "react";
+import "./styles/App.css";
 
 function App() {
+  const [page, setPage] = useState("Home"); // Home, Shop, Cart
 
   return (
-    <>
-      <div>
-        <h1>Placeholder</h1>
-      </div>
-    </>
-  )
+    <div className="container">
+      {page === "Home" && <Home />}
+      {page === "Shop" && <Shop />}
+      {page === "Cart" && <Cart />}
+    </div>
+  );
 }
 
-export default App
+export default App;
