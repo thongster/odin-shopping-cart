@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-const useProducts = (id) => {
+const useProducts = () => {
 //   if (!id) {
 //     id = null
 //   }
-  const [imageURL, setImageURL] = useState(null);
+  const [products, setProducts] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -13,24 +13,26 @@ const useProducts = (id) => {
     const signal = controller.signal;
 
     const fetchData = async () => {
-      fetch("", { signal })
+      fetch("https://fakestoreapi.com/products", { signal })
         .then((response) => {
           if (response.status >= 400) {
             throw new Error("server error");
           }
           return response.json();
         })
+        .then((data) => setProducts(data))
+        // .then((data) => console.log(data))
         .catch((error) => setError(error))
         .finally(() => setLoading(false));
     };
 
-    fetchData();
+    fetchData()
     return () => {
-      controller.abort();
+    //   controller.abort();
     };
   }, []);
 
-  return <></>;
+  return { products, error, loading }
 };
 
 const useFeaturedProducts = () => {
@@ -40,4 +42,4 @@ const useFeaturedProducts = () => {
   return <></>;
 };
 
-export { getAllProducts, getFeaturedProducts, getOneProduct };
+export { useProducts, useFeaturedProducts };
