@@ -4,7 +4,7 @@ import Nav from "./Nav";
 export default function Header() {
   return (
     <header>
-      <h1>Shopping Cart</h1>
+      <h1>After Dark Supply Co.</h1>
       <Nav />
     </header>
   );

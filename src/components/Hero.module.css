@@ -1,7 +1,24 @@
 .hero {
-    border: 1px solid gold;
-    padding: clamp(4rem, 8vw, 8rem) 1.5rem;
-    background-image: url("../assets/hero.jpg");
-    background-position: center;
-    background-size: cover;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh;
+  position: relative;
+  background-image: url("../assets/hero.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  max-width: 480px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
 }
