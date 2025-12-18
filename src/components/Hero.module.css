@@ -9,6 +9,22 @@
   background-size: cover;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.heroContent {
+  position: relative;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+
+  color: #ffffff;
+}
+
 .heroTitle {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
