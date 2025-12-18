@@ -13,11 +13,25 @@ export default function Featured() {
         <h2 className={styles.featuredHeading}>Featured Drop</h2>
         <div className={styles.featuredGrid}>
           <div className={styles.featuredItem}>
-            
-            {products[0].title}
+            <img src={products[0].image} alt={products[0].title} />
+            <h3 className={styles.itemTitle}>{products[0].title}</h3>
+            <p className={styles.itemPrice}>{products[0].price}</p>
           </div>
-          <div className={styles.featuredItem}></div>
-          <div className={styles.featuredItem}></div>
+          <div className={styles.featuredItem}>
+            <img src={products[1].image} alt={products[1].title} />
+            <h3 className={styles.itemTitle}>{products[1].title}</h3>
+            <p className={styles.itemPrice}>{products[1].price}</p>
+        </div>
+          <div className={styles.featuredItem}>
+            <img src={products[2].image} alt={products[2].title} />
+            <h3 className={styles.itemTitle}>{products[2].title}</h3>
+            <p className={styles.itemPrice}>{products[2].price}</p>
+          </div>
+          <div className={styles.featuredItem}>
+            <img src={products[3].image} alt={products[3].title} />
+            <h3 className={styles.itemTitle}>{products[3].title}</h3>
+            <p className={styles.itemPrice}>{products[3].price}</p>
+          </div>
         </div>
       </div>
     </div>

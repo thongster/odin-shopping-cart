@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 
 const useProducts = () => {
-//   if (!id) {
-//     id = null
-//   }
   const [products, setProducts] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
