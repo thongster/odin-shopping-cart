@@ -25,4 +25,17 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  /* justify-content: space-between; */
+}
+
+.itemTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.itemText {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #6b7280;
 }
