@@ -17,6 +17,7 @@
 
   transition:
     background-color 0.15s ease,
+    color 0.15s ease,
     transform 0.05s ease;
 }
 
@@ -29,5 +30,11 @@
 }
 
 .activeLink {
-  border-bottom: 2px solid red;
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+.activeLink:hover {
+      background-color: #4f46e5;
+
 }
