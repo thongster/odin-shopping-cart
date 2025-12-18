@@ -1,40 +1,28 @@
-.values {
+.featured {
   background-color: #f9fafb;
   padding: 4rem 1.5rem;
 }
 
-.valuesInner {
+.featuredInner {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.valuesHeading {
+.featuredHeading {
   font-size: 1.75rem;
   font-weight: 600;
   color: #111827;
   margin-bottom: 2.5rem;
 }
 
-.valuesGrid {
+.featuredGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2.5rem;
 }
 
-.valuesItem {
+.featuredItem {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-}
-
-.itemTitle {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #111827;
-}
-
-.itemText {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #6b7280;
 }
