@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import { Link } from "react-router"
 
 export default function Hero() {
   return (
@@ -9,7 +10,7 @@ export default function Hero() {
             Curated pieces inspired by city nights, neon signs, and sidewalk
             culture.
           </p>
-          <button className={styles.heroButton}>Shop the drop</button>
+          <Link to="shop"><button className={styles.heroButton}>Shop the drop</button></Link>
       </div>
     </div>
   );
