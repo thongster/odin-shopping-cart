@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 
-const getAllProducts = () => {
+const useProducts = (id) => {
+//   if (!id) {
+//     id = null
+//   }
   const [imageURL, setImageURL] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -30,14 +33,7 @@ const getAllProducts = () => {
   return <></>;
 };
 
-const getFeaturedProducts = () => {
-  const [imageURL, setImageURL] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-  return <></>;
-};
-
-const getOneProduct = () => {
+const useFeaturedProducts = () => {
   const [imageURL, setImageURL] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
