@@ -45,7 +45,9 @@
   text-decoration: none;
   border-radius: 6px;
 
-  transition: background-color 0.15s ease, transform 0.05s ease;
+  transition:
+    background-color 0.15s ease,
+    transform 0.05s ease;
 }
 
 .heroButton:hover {
