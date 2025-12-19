@@ -23,13 +23,13 @@ const useProducts = () => {
         .finally(() => setLoading(false));
     };
 
-    fetchData()
+    fetchData();
     return () => {
-    //   controller.abort();
+      //   controller.abort();
     };
   }, []);
 
-  return { products, error, loading }
+  return { products, error, loading };
 };
 
 const useFeaturedProducts = () => {

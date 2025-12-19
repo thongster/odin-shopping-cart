@@ -29,7 +29,9 @@
   border-radius: 8px;
   padding: 1rem;
 
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .featuredItem:hover {
