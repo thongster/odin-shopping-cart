@@ -17,9 +17,9 @@ const ShopGrid = () => {
               <div className={styles.form}>
                 <form action="submit">
                     <div className={styles.count}>
-                        <button>-</button>
-                        <input type="number" min="1"/>
-                        <button>+</button>
+                        <button type="button">-</button>
+                        <input type="number" min="1" aria-label="Quantity"/>
+                        <button type="button">+</button>
                     </div>
                     <button type="submit" className={styles.cartBtn}>Add to Cart</button>
                 </form>
