@@ -32,11 +32,4 @@ const useProducts = () => {
   return { products, error, loading };
 };
 
-const useFeaturedProducts = () => {
-  const [imageURL, setImageURL] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-  return <></>;
-};
-
-export { useProducts, useFeaturedProducts };
+export { useProducts };

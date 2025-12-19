@@ -13,7 +13,7 @@ export default function Featured() {
         <h2 className={styles.featuredHeading}>Featured Drop</h2>
         <div className={styles.featuredGrid}>
           {products.slice(0, 4).map((item) => (
-            <div className={styles.featuredItem}>
+            <div key={item.id} className={styles.featuredItem}>
               <img src={item.image} alt={item.title} />
               <h3 className={styles.itemTitle}>{item.title}</h3>
               <p className={styles.itemPrice}>{item.price}</p>
