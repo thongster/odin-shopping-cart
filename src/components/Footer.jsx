@@ -11,8 +11,8 @@ const Footer = () => {
         </div>
         <nav className={styles.links}>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="shop">Shop</NavLink>
-            <NavLink to="cart">Cart</NavLink>
+            <NavLink to="/shop">Shop</NavLink>
+            <NavLink to="/cart">Cart</NavLink>
         </nav>
       </div>
       <div className={styles.credit}>

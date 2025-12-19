@@ -13,3 +13,56 @@
   align-items: flex-start;
   gap: 2rem;
 }
+
+.brand h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.brand p {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  max-width: 260px;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.links a {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.credit {
+  max-width: 1200px;
+  margin: 2.5rem auto 0;
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.credit a {
+  color: #c0c5d1;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+@media (max-width: 640px) {
+  .footerInner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .links {
+    gap: 1rem;
+  }
+}
