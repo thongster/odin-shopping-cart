@@ -60,3 +60,17 @@
   color: var(--text-secondary);
   justify-self: end;
 }
+
+@media screen and (max-width: 1050px) {
+    .featuredGrid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .featuredGrid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+    }
+}
