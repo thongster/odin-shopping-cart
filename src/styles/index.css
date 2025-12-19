@@ -10,6 +10,10 @@
   --accent-neon: #8b5cf6;
 }
 
+html {
+  font-family: sans-serif;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -26,4 +30,3 @@ h4,
 p {
   margin: 0;
 }
-

@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import { NavLink } from "react-router"
+import { NavLink } from "react-router";
 
 const Footer = () => {
   return (
@@ -10,9 +10,9 @@ const Footer = () => {
           <p>Streetwear, after dark.</p>
         </div>
         <nav className={styles.links}>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/shop">Shop</NavLink>
-            <NavLink to="/cart">Cart</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/shop">Shop</NavLink>
+          <NavLink to="/cart">Cart</NavLink>
         </nav>
       </div>
       <div className={styles.credit}>
