@@ -1,5 +1,5 @@
 import styles from "./Editorial.module.css";
-import image from "../assets/neonstreet.png"
+import image from "../assets/neonstreet.png";
 
 const Editorial = () => {
   return (
