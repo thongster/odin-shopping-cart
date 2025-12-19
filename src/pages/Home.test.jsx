@@ -32,17 +32,21 @@ const mockProducts = [
 
 // Mock fetch globally
 beforeEach(() => {
-  vi.stubGlobal("fetch", vi.fn(() =>
-    Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve([
-        { id: 1, title: "Black Hoodie", price: 59.99, image: "img1" },
-        { id: 2, title: "Night Tee", price: 29.99, image: "img2" },
-        { id: 3, title: "Cargo Pants", price: 79.99, image: "img3" },
-        { id: 4, title: "Beanie", price: 19.99, image: "img4" },
-      ]),
-    })
-  ));
+  vi.stubGlobal(
+    "fetch",
+    vi.fn(() =>
+      Promise.resolve({
+        ok: true,
+        json: () =>
+          Promise.resolve([
+            { id: 1, title: "Black Hoodie", price: 59.99, image: "img1" },
+            { id: 2, title: "Night Tee", price: 29.99, image: "img2" },
+            { id: 3, title: "Cargo Pants", price: 79.99, image: "img3" },
+            { id: 4, title: "Beanie", price: 19.99, image: "img4" },
+          ]),
+      }),
+    ),
+  );
 });
 
 describe("Home page", () => {
@@ -50,37 +54,31 @@ describe("Home page", () => {
     render(
       <MemoryRouter>
         <Home />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    expect(
-      screen.getByText(/after dark/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/after dark/i)).toBeInTheDocument();
   });
 
   it("shows loading state for featured products", () => {
     render(
       <MemoryRouter>
         <Home />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    expect(
-      screen.getByText(/loading/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/loading/i)).toBeInTheDocument();
   });
 
   it("renders featured products after fetch", async () => {
     render(
       <MemoryRouter>
         <Home />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     await waitFor(() => {
-      expect(
-        screen.getByText("Black Hoodie")
-      ).toBeInTheDocument();
+      expect(screen.getByText("Black Hoodie")).toBeInTheDocument();
     });
 
     expect(screen.getByText("Night Tee")).toBeInTheDocument();
@@ -92,12 +90,10 @@ describe("Home page", () => {
     render(
       <MemoryRouter>
         <Home />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     const heading = await screen.findByText(/featured drop/i);
-    expect(
-       heading
-    ).toBeInTheDocument();
+    expect(heading).toBeInTheDocument();
   });
 });

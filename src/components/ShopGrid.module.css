@@ -1,6 +1,6 @@
 .container {
-    background-color: var(--bg-elevated);
-    padding: 4rem 1.5rem;
+  background-color: var(--bg-elevated);
+  padding: 4rem 1.5rem;
 }
 
 .containerInner {
