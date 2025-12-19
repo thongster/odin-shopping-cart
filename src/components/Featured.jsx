@@ -16,7 +16,7 @@ export default function Featured() {
             <div key={item.id} className={styles.featuredItem}>
               <img src={item.image} alt={item.title} />
               <h3 className={styles.itemTitle}>{item.title}</h3>
-              <p className={styles.itemPrice}>{item.price}</p>
+              <p className={styles.itemPrice}>${item.price.toFixed(2)}</p>
             </div>
           ))}
         </div>
