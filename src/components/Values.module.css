@@ -1,5 +1,5 @@
 .values {
-  background-color: #f9fafb;
+  background-color: var(--bg-surface);
   padding: 4rem 1.5rem;
 }
 
@@ -11,8 +11,8 @@
 .valuesHeading {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #111827;
   margin-bottom: 2.5rem;
+  color: var(--text-primary);
 }
 
 .valuesGrid {
@@ -30,11 +30,11 @@
 .itemTitle {
   font-size: 1rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-primary);
 }
 
 .itemText {
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #6b7280;
 }
