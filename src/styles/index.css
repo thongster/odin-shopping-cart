@@ -1,10 +1,22 @@
+:root {
+  --bg-night: #0b0d10;
+  --bg-surface: #12151a;
+  --bg-elevated: #181c22;
+
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+
+  --accent-neon: #8b5cf6;
+}
+
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f9fafb;
-  color: #111827;
+  background-color: var(--bg-night);
+  color: var(--text-primary);
 }
 
 h1,
@@ -14,3 +26,4 @@ h4,
 p {
   margin: 0;
 }
+
