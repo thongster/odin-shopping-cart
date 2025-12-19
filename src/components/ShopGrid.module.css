@@ -1,6 +1,6 @@
 .container {
-  background-color: var(--bg-elevated);
-  padding: 4rem 1.5rem;
+  background-color: var(--bg-surface);
+  padding: 2rem 1.5rem;
 }
 
 .containerInner {
@@ -10,6 +10,55 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem 2rem;
+}
+
+.shopItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+
+  background-color: var(--bg-elevated);
+  padding: 1rem;
+  border-radius: 10px;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.shopItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.shopItem img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  background-color: #f9fafb;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.itemTitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.itemPrice {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 3rem 1rem;
+  }
+
+  .grid {
+    gap: 2rem 1.5rem;
+  }
 }
