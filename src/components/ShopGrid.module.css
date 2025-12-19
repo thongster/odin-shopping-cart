@@ -1,0 +1,15 @@
+.container {
+    background-color: var(--bg-elevated);
+    padding: 4rem 1.5rem;
+}
+
+.containerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}

@@ -1,4 +1,11 @@
 .header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
     max-width: 1200px;
     padding: 1rem 1.5rem;
+}
+
+.header p {
+    color: var(--text-secondary);
 }
