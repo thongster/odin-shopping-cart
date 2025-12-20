@@ -1,4 +1,4 @@
-import styles from 'LoadError.module.css'
+import styles from './LoadError.module.css';
 
 const Loading = () => {
     return (
