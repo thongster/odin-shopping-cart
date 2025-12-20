@@ -18,7 +18,6 @@ const useProducts = () => {
           return response.json();
         })
         .then((data) => setProducts(data))
-        // .then((data) => console.log(data))
         .catch((error) => setError(error))
         .finally(() => setLoading(false));
     };
