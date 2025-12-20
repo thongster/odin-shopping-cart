@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router";
 import styles from './CartBody.module.css'
+import CartItem from './CartItem'
 
 const CartBody = () => {
   const { cart, setCart } = useOutletContext();
@@ -7,9 +8,11 @@ const CartBody = () => {
     return (
         <div className={styles.container}>
             <div className={styles.containerInner}>
-                {cart.map((item) => (
-                    <p>{item.title}</p>
-                ))}
+                <div className={styles.cartMain}>
+                    {cart.map((item) => (
+                        <CartItem item={item} />
+                    ))}
+                </div>
             </div>
         </div>
     )
