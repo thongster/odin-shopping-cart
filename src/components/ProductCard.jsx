@@ -15,8 +15,19 @@ const ProductCard = ({ item }) => {
   };
 
 
-  const handleSubmit = (selectedItem) => {
+  const handleSubmit = (product) => {
+    if (count === 0) {
+        return
+    }
 
+    let cartItem = {
+        id: product.id,
+        title: product.title,
+        image: product.image,
+        price: product.price,
+        count: count,
+    }
+    setCart((cart) => [...cart, cartItem])
   };
 
   return (
