@@ -8,7 +8,9 @@
   padding: 1rem;
   border-radius: 10px;
 
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .shopItem:hover {
@@ -103,7 +105,9 @@
   text-transform: uppercase;
 
   cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.05s ease;
+  transition:
+    background-color 0.15s ease,
+    transform 0.05s ease;
 }
 
 .cartBtn:hover {
@@ -121,5 +125,5 @@
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }

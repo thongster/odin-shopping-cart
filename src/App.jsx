@@ -5,12 +5,12 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function App() {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState([]);
 
   return (
     <div className="container">
       <Header />
-      <Outlet context={{ cart, setCart }}/>
+      <Outlet context={{ cart, setCart }} />
       <Footer />
     </div>
   );

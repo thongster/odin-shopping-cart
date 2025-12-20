@@ -12,7 +12,6 @@ const ShopGrid = () => {
         <div className={styles.grid}>
           {products.map((item) => (
             <ProductCard item={item} />
-
           ))}
         </div>
       </div>
