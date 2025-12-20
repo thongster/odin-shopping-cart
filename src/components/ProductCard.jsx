@@ -1,33 +1,33 @@
 import { useOutletContext } from "react-router";
-import { useState } from 'react'
+import { useState } from "react";
 import styles from "./ProductCard.module.css";
 
 const ProductCard = ({ item }) => {
   const { cart, setCart } = useOutletContext();
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   const minusOne = () => {
     if (count === 0) {
-        return
+      return;
     } else {
-        setCount(count - 1)
+      setCount(count - 1);
     }
   };
 
   const handleSubmit = (e, product) => {
-    e.preventDefault()
+    e.preventDefault();
     if (count === 0) {
-        return
+      return;
     }
 
     let cartItem = {
-        id: product.id,
-        title: product.title,
-        image: product.image,
-        price: product.price,
-        count: count,
-    }
-    setCart((cart) => [...cart, cartItem])
+      id: product.id,
+      title: product.title,
+      image: product.image,
+      price: product.price,
+      count: count,
+    };
+    setCart((prevCart) => [...prevCart, cartItem]);
   };
 
   return (
@@ -36,12 +36,18 @@ const ProductCard = ({ item }) => {
       <h3 className={styles.itemTitle}>{item.title}</h3>
       <p className={styles.itemPrice}>${item.price.toFixed(2)}</p>
       <div className={styles.form}>
-        <form action="submit" onSubmit={(e) => handleSubmit(e, item)} >
+        <form action="submit" onSubmit={(e) => handleSubmit(e, item)}>
           <div className={styles.count}>
             <button type="button" onClick={() => minusOne()}>
               -
             </button>
-            <input type="number" min="0" aria-label="Quantity" value={count} onChange={(e) => setCount(e.target.value)}/>
+            <input
+              type="number"
+              min="0"
+              aria-label="Quantity"
+              value={count}
+              onChange={(e) => setCount(e.target.value)}
+            />
             <button type="button" onClick={() => setCount(count + 1)}>
               +
             </button>
