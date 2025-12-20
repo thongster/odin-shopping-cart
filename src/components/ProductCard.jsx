@@ -14,8 +14,8 @@ const ProductCard = ({ item }) => {
     }
   };
 
-
-  const handleSubmit = (product) => {
+  const handleSubmit = (e, product) => {
+    e.preventDefault()
     if (count === 0) {
         return
     }
@@ -36,12 +36,12 @@ const ProductCard = ({ item }) => {
       <h3 className={styles.itemTitle}>{item.title}</h3>
       <p className={styles.itemPrice}>${item.price.toFixed(2)}</p>
       <div className={styles.form}>
-        <form action="submit" onSubmit={handleSubmit(item)} >
+        <form action="submit" onSubmit={(e) => handleSubmit(e, item)} >
           <div className={styles.count}>
             <button type="button" onClick={() => minusOne()}>
               -
             </button>
-            <input type="number" min="0" aria-label="Quantity" value={count}/>
+            <input type="number" min="0" aria-label="Quantity" value={count} onChange={(e) => setCount(e.target.value)}/>
             <button type="button" onClick={() => setCount(count + 1)}>
               +
             </button>
