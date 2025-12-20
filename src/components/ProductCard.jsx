@@ -1,16 +1,19 @@
 import { useOutletContext } from "react-router";
+import { useState } from 'react'
 import styles from "./ProductCard.module.css";
 
 const ProductCard = ({ item }) => {
   const { cart, setCart } = useOutletContext();
+  const [count, setCount] = useState(0)
 
-  const minusOne = (selectedItem) => {
-    console.log(selectedItem)
+  const minusOne = () => {
+    if (count === 0) {
+        return
+    } else {
+        setCount(count - 1)
+    }
   };
 
-  const plusOne = (selectedItem) => {
-    console.log(selectedItem)
-  };
 
   const handleSubmit = (selectedItem) => {
 
@@ -22,13 +25,13 @@ const ProductCard = ({ item }) => {
       <h3 className={styles.itemTitle}>{item.title}</h3>
       <p className={styles.itemPrice}>${item.price.toFixed(2)}</p>
       <div className={styles.form}>
-        <form action="submit" onSubmit={handleSubmit(item)}>
+        <form action="submit" onSubmit={handleSubmit(item)} >
           <div className={styles.count}>
-            <button type="button" onClick={() => minusOne(item)}>
+            <button type="button" onClick={() => minusOne()}>
               -
             </button>
-            <input type="number" min="1" aria-label="Quantity" />
-            <button type="button" onClick={() => plusOne(item)}>
+            <input type="number" min="0" aria-label="Quantity" value={count}/>
+            <button type="button" onClick={() => setCount(count + 1)}>
               +
             </button>
           </div>
