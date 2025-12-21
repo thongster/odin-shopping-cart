@@ -7,6 +7,22 @@ import Footer from "./components/Footer";
 function App() {
   const [cart, setCart] = useState([]);
 
+  const addToCart = () => {
+
+  }
+
+  const removeFromCart = () => {
+
+  }
+
+  const updateQty = () => {
+    
+  }
+
+  const clearCart = () => {
+    setCart([])
+  }
+
   return (
     <div className="container">
       <Header />
