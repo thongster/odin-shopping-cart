@@ -3,7 +3,7 @@ import styles from './CartBody.module.css'
 import CartItem from './CartItem'
 
 const CartBody = () => {
-  const { cart, setCart } = useOutletContext();
+  const { cart } = useOutletContext();
   
     return (
         <div className={styles.container}>

@@ -16,7 +16,7 @@ function App() {
   }
 
   const updateQty = () => {
-    
+
   }
 
   const clearCart = () => {
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <Outlet context={{ cart, setCart }} />
+      <Outlet context={{ cart, setCart, addToCart, removeFromCart, updateQty, clearCart }} />
       <Footer />
     </div>
   );
