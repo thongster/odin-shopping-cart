@@ -22,18 +22,17 @@
 .header button {
   background: none;
   border: none;
-
   color: var(--text-secondary);
   font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-
   cursor: pointer;
-  padding: 0.25rem 0;
-  transition: color 0.15s ease;
+  transition: color 0.4s ease-in-out,
+              border 0.4s ease-in-out;
 }
 
 .header button:hover {
   color: var(--text-primary);
+  border-bottom: 1px solid var(--accent-neon);
 }
