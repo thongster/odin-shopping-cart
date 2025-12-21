@@ -6,11 +6,16 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .titleGroup h2 {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin: 0;
 }
 
 .titleGroup p {
@@ -28,8 +33,9 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   cursor: pointer;
-  transition: color 0.4s ease-in-out,
-              border 0.4s ease-in-out;
+  transition:
+    color 0.4s ease-in-out,
+    border 0.4s ease-in-out;
 }
 
 .header button:hover {

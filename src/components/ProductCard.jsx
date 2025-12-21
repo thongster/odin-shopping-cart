@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./ProductCard.module.css";
 
 const ProductCard = ({ item }) => {
-  const { cart, setCart } = useOutletContext();
+  const { setCart, addToCart } = useOutletContext();
   const [count, setCount] = useState(0);
 
   const minusOne = () => {
@@ -27,7 +27,8 @@ const ProductCard = ({ item }) => {
       price: product.price,
       count: count,
     };
-    setCart((prevCart) => [...prevCart, cartItem]);
+    
+    addToCart(cartItem)
   };
 
   return (

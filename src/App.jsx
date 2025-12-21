@@ -7,26 +7,31 @@ import Footer from "./components/Footer";
 function App() {
   const [cart, setCart] = useState([]);
 
-  const addToCart = () => {
+  const addToCart = (cartItem) => {
+    setCart((prevCart) => [...prevCart, cartItem])
+  };
 
-  }
+  const removeFromCart = () => {};
 
-  const removeFromCart = () => {
-
-  }
-
-  const updateQty = () => {
-
-  }
+  const updateQty = () => {};
 
   const clearCart = () => {
-    setCart([])
-  }
+    setCart([]);
+  };
 
   return (
     <div className="container">
       <Header />
-      <Outlet context={{ cart, setCart, addToCart, removeFromCart, updateQty, clearCart }} />
+      <Outlet
+        context={{
+          cart,
+          setCart,
+          addToCart,
+          removeFromCart,
+          updateQty,
+          clearCart,
+        }}
+      />
       <Footer />
     </div>
   );
