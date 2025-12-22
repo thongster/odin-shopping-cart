@@ -11,7 +11,10 @@ function App() {
     setCart((prevCart) => [...prevCart, cartItem])
   };
 
-  const removeFromCart = () => {};
+  const removeFromCart = (selectedItem) => {
+    const updatedCart = cart.filter((item) => (item.id != selectedItem.id))
+    setCart(updatedCart)
+  };
 
   const updateQty = () => {};
 
