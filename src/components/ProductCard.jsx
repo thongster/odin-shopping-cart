@@ -7,14 +7,6 @@ const ProductCard = ({ item }) => {
   const { setCart, addToCart } = useOutletContext();
   const [count, setCount] = useState(0);
 
-  const minusOne = () => {
-    if (count === 0) {
-      return;
-    } else {
-      setCount(count - 1);
-    }
-  };
-
   const handleSubmit = (e, product) => {
     e.preventDefault();
     if (count === 0) {
@@ -39,7 +31,7 @@ const ProductCard = ({ item }) => {
       <p className={styles.itemPrice}>${item.price.toFixed(2)}</p>
       <div className={styles.form}>
         <form action="submit" onSubmit={(e) => handleSubmit(e, item)}>
-          <CountCtrl minusOne={minusOne} count={count} setCount={setCount} />
+          <CountCtrl count={count} setCount={setCount} />
           <button type="submit" className={styles.cartBtn}>
             Add to Cart
           </button>

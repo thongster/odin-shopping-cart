@@ -1,6 +1,14 @@
 import styles from './CountCtrl.module.css'
 
-const CountCtrl = ({ minusOne, count, setCount }) => {
+const CountCtrl = ({ count, setCount }) => {
+
+      const minusOne = () => {
+            if (count === 0) {
+            return;
+            } else {
+            setCount(count - 1);
+            }
+        };
 
     return (
           <div className={styles.count}>

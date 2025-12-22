@@ -10,7 +10,7 @@ const CartBody = () => {
       <div className={styles.containerInner}>
         <div className={styles.cartMain}>
           {cart.map((item) => (
-            <CartItem item={item} />
+            <CartItem key={item.id} item={item} />
           ))}
         </div>
       </div>
