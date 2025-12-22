@@ -1,8 +1,6 @@
-import { useOutletContext } from "react-router";
 import styles from "./CountCtrl.module.css";
 
 const CountCtrl = ({ count, onChange }) => {
-  
   const minusOne = () => {
     if (count === 0) {
       return;

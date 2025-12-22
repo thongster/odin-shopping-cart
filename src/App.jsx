@@ -17,14 +17,11 @@ function App() {
   };
 
   const updateQty = (selectedItem, newCount) => {
-
-    setCart((prevCart) => (
-      prevCart.map((item) => (
-        item.id === selectedItem.id
-          ? { ...item, count: newCount }
-          : item
-      ))
-    ))
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === selectedItem.id ? { ...item, count: newCount } : item,
+      ),
+    );
   };
 
   const clearCart = () => {
