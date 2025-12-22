@@ -8,11 +8,13 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (cartItem) => {
-    if (cart.some((item) => (item.id === cartItem.id)) 
-      && cart.some((item) => (cartItem.count > item.count))) {
-        updateQty(cartItem, cartItem.count)
-  } else if (cart.some((item) => (item.id === cartItem.id))) {
-      return
+    if (
+      cart.some((item) => item.id === cartItem.id) &&
+      cart.some((item) => cartItem.count > item.count)
+    ) {
+      updateQty(cartItem, cartItem.count);
+    } else if (cart.some((item) => item.id === cartItem.id)) {
+      return;
     } else {
       setCart((prevCart) => [...prevCart, cartItem]);
     }

@@ -7,21 +7,21 @@ const CartBody = () => {
 
   if (cart.length === 0) {
     return (
-    <div className={styles.container}>
-      <div className={styles.containerInner}>
-        <div className={styles.emptyCart}>
+      <div className={styles.container}>
+        <div className={styles.containerInner}>
+          <div className={styles.emptyCart}>
             <h3 className={styles.emptyTitle}>Your cart is empty</h3>
             <p className={styles.emptyText}>
-                Browse the collection and add items to your cart.
+              Browse the collection and add items to your cart.
             </p>
 
             <Link to="/shop" className={styles.emptyLink}>
-                View all products
+              View all products
             </Link>
+          </div>
         </div>
       </div>
-    </div>
-    )
+    );
   }
 
   return (
