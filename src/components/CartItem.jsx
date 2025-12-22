@@ -3,7 +3,7 @@ import styles from "./CartItem.module.css";
 import CountCtrl from "./CountCtrl";
 
 const CartItem = ({ item }) => {
-  const { setCart, removeFromCart, updateQty } = useOutletContext();
+  const { removeFromCart, updateQty } = useOutletContext();
 
   return (
     <div className={styles.cartItem}>

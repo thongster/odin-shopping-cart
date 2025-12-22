@@ -4,7 +4,7 @@ import styles from "./ProductCard.module.css";
 import CountCtrl from "./CountCtrl";
 
 const ProductCard = ({ item }) => {
-  const { setCart, addToCart } = useOutletContext();
+  const { addToCart } = useOutletContext();
   const [count, setCount] = useState(0);
 
   const handleSubmit = (e, product) => {

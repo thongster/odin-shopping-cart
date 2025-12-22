@@ -3,33 +3,6 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import Home from "./Home.jsx";
 
-const mockProducts = [
-  {
-    id: 1,
-    title: "Black Hoodie",
-    price: 59.99,
-    image: "hoodie.jpg",
-  },
-  {
-    id: 2,
-    title: "Night Tee",
-    price: 29.99,
-    image: "tee.jpg",
-  },
-  {
-    id: 3,
-    title: "Cargo Pants",
-    price: 79.99,
-    image: "pants.jpg",
-  },
-  {
-    id: 4,
-    title: "Beanie",
-    price: 19.99,
-    image: "beanie.jpg",
-  },
-];
-
 // Mock fetch globally
 beforeEach(() => {
   vi.stubGlobal(
