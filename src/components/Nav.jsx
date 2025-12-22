@@ -4,6 +4,7 @@ import { NavLink } from "react-router";
 
 export default function Nav({ cart }) {
   return (
+    <>
     <div className={styles.nav}>
       <NavLink
         to="/"
@@ -32,5 +33,12 @@ export default function Nav({ cart }) {
         <CartCount cart={cart} />
       </NavLink>
     </div>
+    <button className={styles.hamburger}>
+          <span />
+          <span />
+          <span />
+    </button>
+        
+    </>
   );
 }

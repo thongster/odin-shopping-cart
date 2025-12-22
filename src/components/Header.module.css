@@ -1,4 +1,4 @@
-header {
+.header {
   width: 100%;
   display: flex;
   align-items: center;
@@ -7,4 +7,16 @@ header {
   padding: 1.5rem 1.5rem;
   background-color: var(--bg-night);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .title {
+    font-size: 1.25rem;
+  }
 }
