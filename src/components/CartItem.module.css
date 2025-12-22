@@ -1,0 +1,18 @@
+.cartItem {
+  display: grid;
+  grid-template-columns: 96px 1fr auto auto;
+  align-items: center;
+  gap: 1.5rem;
+
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.image {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  background-color: #f9fafb;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
