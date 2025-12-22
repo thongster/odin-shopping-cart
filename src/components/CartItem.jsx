@@ -36,7 +36,7 @@ const CartItem = ({ item }) => {
               value={count}
               onChange={(e) => setCount(e.target.value)}
             />
-            <button type="button" onClick={() => setCount(count + 1)}>
+            <button type="button" onClick={() => setCount(Number(count + 1))}>
               +
             </button>
           </div>
