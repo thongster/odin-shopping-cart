@@ -31,7 +31,7 @@ const ProductCard = ({ item }) => {
       <p className={styles.itemPrice}>${item.price.toFixed(2)}</p>
       <div className={styles.form}>
         <form action="submit" onSubmit={(e) => handleSubmit(e, item)}>
-          <CountCtrl item={item} count={count} setCount={setCount} />
+          <CountCtrl count={count} onChange={setCount} />
           <button type="submit" className={styles.cartBtn}>
             Add to Cart
           </button>
