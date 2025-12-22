@@ -11,7 +11,7 @@ const CartTotal = () => {
       .toFixed(2),
   );
   const tax = Number((subtotal * 0.05).toFixed(2));
-  const total = subtotal + tax;
+  const total = Number(subtotal + tax).toFixed(2);
 
   return (
     <div className={styles.container}>
