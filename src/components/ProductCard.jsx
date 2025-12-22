@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router";
 import { useState } from "react";
 import styles from "./ProductCard.module.css";
+import CountCtrl from "./CountCtrl";
 
 const ProductCard = ({ item }) => {
   const { setCart, addToCart } = useOutletContext();
@@ -38,21 +39,7 @@ const ProductCard = ({ item }) => {
       <p className={styles.itemPrice}>${item.price.toFixed(2)}</p>
       <div className={styles.form}>
         <form action="submit" onSubmit={(e) => handleSubmit(e, item)}>
-          <div className={styles.count}>
-            <button type="button" onClick={() => minusOne()}>
-              -
-            </button>
-            <input
-              type="number"
-              min="0"
-              aria-label="Quantity"
-              value={count}
-              onChange={(e) => setCount(e.target.value)}
-            />
-            <button type="button" onClick={() => setCount(Number(count + 1))}>
-              +
-            </button>
-          </div>
+          <CountCtrl minusOne={minusOne} count={count} setCount={setCount} />
           <button type="submit" className={styles.cartBtn}>
             Add to Cart
           </button>
