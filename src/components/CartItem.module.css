@@ -50,3 +50,23 @@
 .remove:hover {
   color: var(--text-primary);
 }
+
+@media (max-width: 640px) {
+  .cartItem {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .details {
+    grid-column: 2 / 5;
+  }
+
+  .countctrl {
+    grid-column: 1 / 4;
+  }
+
+  .remove {
+    justify-self: end;
+    grid-column: 4 / 5;
+  }
+}

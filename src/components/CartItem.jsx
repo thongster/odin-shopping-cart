@@ -12,10 +12,12 @@ const CartItem = ({ item }) => {
         <h3 className={styles.title}>{item.title}</h3>
         <p className={styles.price}>${item.price.toFixed(2)}</p>
       </div>
-      <CountCtrl
-        count={item.count}
-        onChange={(newCount) => updateQty(item, newCount)}
-      />
+      <div className={styles.countctrl}>
+          <CountCtrl
+            count={item.count}
+            onChange={(newCount) => updateQty(item, newCount)}
+          />
+      </div>
       <button
         type="button"
         className={styles.remove}
