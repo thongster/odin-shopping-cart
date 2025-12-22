@@ -13,7 +13,7 @@ const renderNav = (cart = []) => {
   return render(
     <MemoryRouter>
       <Nav cart={cart} />
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 };
 

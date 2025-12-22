@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import CartCount from '../CartCount'
+import CartCount from "../CartCount";
 
 describe("CartCount", () => {
   it("does not render anything when cart is empty", () => {
@@ -9,13 +9,13 @@ describe("CartCount", () => {
     expect(screen.queryByText(/\d+/)).toBeNull();
   });
 
-    it("renders the total quantity of items in the cart", () => {
+  it("renders the total quantity of items in the cart", () => {
     const mockCart = [
       { id: 1, count: 2 },
       { id: 2, count: 3 },
     ];
 
     render(<CartCount cart={mockCart} />);
-    expect(screen.getByText("5")).toBeInTheDocument()
+    expect(screen.getByText("5")).toBeInTheDocument();
   });
 });
