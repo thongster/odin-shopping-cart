@@ -1,0 +1,9 @@
+.container {
+  background-color: var(--bg-night);
+  padding: 2rem 1.5rem;
+}
+
+.containerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
