@@ -1,6 +1,8 @@
+import { useOutletContext } from "react-router";
 import styles from "./CountCtrl.module.css";
 
 const CountCtrl = ({ count, setCount }) => {
+  
   const minusOne = () => {
     if (count === 0) {
       return;
@@ -19,7 +21,7 @@ const CountCtrl = ({ count, setCount }) => {
         min="0"
         aria-label="Quantity"
         value={count}
-        onChange={(e) => setCount(e.target.value)}
+        onChange={(e) => setCount(Number(e.target.value))}
       />
       <button type="button" onClick={() => setCount(Number(count + 1))}>
         +

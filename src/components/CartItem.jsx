@@ -4,7 +4,7 @@ import styles from "./CartItem.module.css";
 import CountCtrl from "./CountCtrl";
 
 const CartItem = ({ item }) => {
-  const { setCart, addToCart, removeFromCart } = useOutletContext();
+  const { setCart, removeFromCart } = useOutletContext();
   const [count, setCount] = useState(0);
 
   return (
@@ -14,7 +14,7 @@ const CartItem = ({ item }) => {
         <h3 className={styles.title}>{item.title}</h3>
         <p className={styles.price}>${item.price.toFixed(2)}</p>
       </div>
-      <CountCtrl count={count} setCount={setCount} />
+      <CountCtrl count={item.count} setCount={setCount} />
       <button type="button" className={styles.remove} onClick={() => removeFromCart(item)}>
         Remove
       </button>
