@@ -20,8 +20,8 @@ const ProductCard = ({ item }) => {
       price: product.price,
       count: count,
     };
-    
-    addToCart(cartItem)
+
+    addToCart(cartItem);
   };
 
   return (
