@@ -1,7 +1,8 @@
 import styles from "./Nav.module.css";
+import CartCount from "./CartCount";
 import { NavLink } from "react-router";
 
-export default function Nav() {
+export default function Nav({ cart }) {
   return (
     <div className={styles.nav}>
       <NavLink
@@ -28,6 +29,7 @@ export default function Nav() {
         }
       >
         Cart
+        <CartCount cart={cart} />
       </NavLink>
     </div>
   );

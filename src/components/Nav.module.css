@@ -6,18 +6,12 @@
 
 .navLink {
   padding: 0.25rem 0.5rem;
-  /* border-radius: 6px; */
-
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-
-  /* background-color: #f3f4f6; */
   color: var(--text-secondary);
-
   transition:
-    background-color 0.15s ease,
     color 0.15s ease,
     transform 0.05s ease;
 }

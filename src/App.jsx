@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="container">
-      <Header />
+      <Header cart={cart} />
       <Outlet
         context={{
           cart,
