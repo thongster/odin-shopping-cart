@@ -42,6 +42,7 @@
   border: none;
   cursor: pointer;
   z-index: 1001;
+  border-radius: 6px;
 }
 
 .hamburger span {
@@ -54,6 +55,53 @@
     opacity 0.2s ease;
 }
 
+.hamburger:hover {
+  background-color: var(--bg-elevated);
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 4rem;
+  right: 1.15rem;
+  z-index: 1001;
+  background-color: var(--bg-elevated);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
+
+.mobileNavLink {
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition:
+    color 0.15s ease,
+    transform 0.05s ease;
+}
+
+.mobileNavLink:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.mobileNavLink:active {
+  transform: translateY(1px);
+}
+
+.mobileActiveLink {
+  color: var(--text-primary);
+}
+
+.open {
+  display: flex;
+}
+
 @media screen and (max-width: 768px) {
   .nav {
     display: none;
@@ -62,4 +110,5 @@
   .hamburger {
     display: flex;
   }
+
 }

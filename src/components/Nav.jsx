@@ -38,7 +38,35 @@ export default function Nav({ cart }) {
           <span />
           <span />
     </button>
-        
+    <div className={`${styles.mobileNav} ${styles.open}`}>
+            <NavLink
+        to="/"
+        end
+        className={({ isActive }) =>
+          isActive ? `${styles.mobileActiveLink} ${styles.mobileNavLink}` : styles.mobileNavLink
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="shop"
+        className={({ isActive }) =>
+          isActive ? `${styles.mobileActiveLink} ${styles.mobileNavLink}` : styles.mobileNavLink
+        }
+      >
+        Shop
+      </NavLink>
+      <NavLink
+        to="cart"
+        className={({ isActive }) =>
+          isActive ? `${styles.mobileActiveLink} ${styles.mobileNavLink}` : styles.mobileNavLink
+        }
+      >
+        Cart
+        <CartCount cart={cart} />
+      </NavLink>
+    </div>
+
     </>
   );
 }

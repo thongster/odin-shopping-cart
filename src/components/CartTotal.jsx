@@ -4,9 +4,14 @@ import { useOutletContext } from "react-router";
 const CartTotal = () => {
   const { cart } = useOutletContext();
 
-  const subtotal = Number(cart.map((item) => (item.count * item.price)).reduce((a, b) => a + b, 0).toFixed(2))
-  const tax = Number((subtotal * 0.05).toFixed(2))
-  const total = subtotal + tax
+  const subtotal = Number(
+    cart
+      .map((item) => item.count * item.price)
+      .reduce((a, b) => a + b, 0)
+      .toFixed(2),
+  );
+  const tax = Number((subtotal * 0.05).toFixed(2));
+  const total = subtotal + tax;
 
   return (
     <div className={styles.container}>
@@ -36,10 +41,7 @@ const CartTotal = () => {
               <span>${total}</span>
             </div>
 
-            <button className={styles.checkoutBtn}>
-                Checkout
-            </button>
-
+            <button className={styles.checkoutBtn}>Checkout</button>
           </div>
         </div>
       </div>
