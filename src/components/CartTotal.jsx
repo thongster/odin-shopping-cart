@@ -4,6 +4,10 @@ import { useOutletContext } from "react-router";
 const CartTotal = () => {
   const { cart } = useOutletContext();
 
+  const subtotal = Number(cart.map((item) => (item.count * item.price)).reduce((a, b) => a + b, 0).toFixed(2))
+  const tax = Number((subtotal * 0.05).toFixed(2))
+  const total = subtotal + tax
+
   return (
     <div className={styles.container}>
       <div className={styles.containerInner}>
@@ -12,12 +16,12 @@ const CartTotal = () => {
           <div className={styles.summaryRows}>
             <div className={styles.row}>
               <span>Subtotal</span>
-              <span>$—.—</span>
+              <span>${subtotal}</span>
             </div>
 
             <div className={styles.row}>
-              <span>Estimated Tax</span>
-              <span>$—.—</span>
+              <span>Tax 5%</span>
+              <span>${tax}</span>
             </div>
 
             <div className={styles.row}>
@@ -29,7 +33,7 @@ const CartTotal = () => {
 
             <div className={`${styles.row} ${styles.total}`}>
               <span>Total</span>
-              <span>$—.—</span>
+              <span>${total}</span>
             </div>
 
             <button className={styles.checkoutBtn}>
