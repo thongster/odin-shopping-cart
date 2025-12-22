@@ -40,6 +40,12 @@ const CartItem = ({ item }) => {
               +
             </button>
           </div>
+            <button
+                type="button"
+                className={styles.remove}
+            >
+                Remove
+            </button>
     </div>
   );
 };
