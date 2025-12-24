@@ -1,5 +1,6 @@
 import styles from "./CartTotal.module.css";
 import { useOutletContext } from "react-router";
+import CheckoutDone from "./CheckoutDone";
 
 const CartTotal = () => {
   const { cart } = useOutletContext();
@@ -42,6 +43,8 @@ const CartTotal = () => {
             </div>
 
             <button className={styles.checkoutBtn}>Checkout</button>
+
+            <CheckoutDone />
           </div>
         </div>
       </div>
