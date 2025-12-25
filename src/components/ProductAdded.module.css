@@ -1,14 +1,17 @@
 .productAdded {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 1rem;
+  right: 1rem;
   padding: 1rem 1.25rem;
   background-color: var(--bg-elevated);
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--text-primary);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 0;
   pointer-events: none;
+  transform: translateY(6px);
+  z-index: 1000;
 }
 
 .productAdded h4 {

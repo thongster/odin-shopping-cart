@@ -1,7 +1,8 @@
 import styles from "./ProductAdded.module.css";
 
-const ProductAdded = () => {
-  return <div className={styles.productAdded}>something here</div>;
+
+const ProductAdded = ({ isAdded }) => {
+  return <div className={`${styles.productAdded} ${isAdded ? styles.show : ""}`}>something here</div>;
 };
 
 export default ProductAdded;

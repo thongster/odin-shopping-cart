@@ -50,7 +50,7 @@ const ProductCard = ({ item }) => {
           </button>
         </form>
       </div>
-      {isAdded && <ProductAdded />}
+      {isAdded && <ProductAdded isAdded={isAdded}/>}
     </div>
   );
 };
