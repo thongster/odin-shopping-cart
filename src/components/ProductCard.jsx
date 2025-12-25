@@ -27,7 +27,11 @@ const ProductCard = ({ item }) => {
   };
 
   const onAdd = () => {
-    
+    if (count === 0) {
+      return
+    } else {
+      setIsAdded(true)
+    }
   }
 
   return (
@@ -38,13 +42,12 @@ const ProductCard = ({ item }) => {
       <div className={styles.form}>
         <form action="submit" onSubmit={(e) => handleSubmit(e, item)}>
           <CountCtrl count={count} onChange={setCount} />
-          <button type="submit" className={styles.cartBtn}>
+          <button type="submit" className={styles.cartBtn} onClick={() => onAdd()}>
             Add to Cart
           </button>
         </form>
       </div>
-      {/* {isAdded && <ProductAdded />} */}
-      <ProductAdded />
+      {isAdded && <ProductAdded />}
     </div>
   );
 };
