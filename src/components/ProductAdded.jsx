@@ -2,8 +2,8 @@ import styles from './ProductAdded.module.css'
 
 const ProductAdded = () => {
   return (
-    <div>
-      
+    <div className={styles.productAdded}>
+      something here
     </div>
   )
 }
