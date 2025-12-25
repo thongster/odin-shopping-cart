@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./ProductCard.module.css";
 import CountCtrl from "./CountCtrl";
 import ProductAdded from "./ProductAdded";
@@ -24,15 +24,18 @@ const ProductCard = ({ item }) => {
     };
 
     addToCart(cartItem);
+    setIsAdded(true)
   };
 
-  const onAdd = () => {
-    if (count === 0) {
-      return
-    } else {
-      setIsAdded(true)
-    }
-  }
+  useEffect(() => {
+    if (!setIsAdded) return;
+
+    const timer = setTimeout(() => {
+      setIsAdded(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [isAdded]);
 
   return (
     <div className={styles.shopItem}>
