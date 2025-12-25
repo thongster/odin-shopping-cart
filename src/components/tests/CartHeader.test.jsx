@@ -8,8 +8,8 @@ vi.mock("react-router", async () => {
   return {
     ...actual,
     useOutletContext: vi.fn(),
-  };    
-})
+  };
+});
 
 const setup = () => {
   const clearCart = vi.fn();
@@ -26,14 +26,16 @@ describe("CartHeader", () => {
     setup();
 
     expect(screen.getByText("Your Cart")).toBeInTheDocument();
-    expect(screen.getByText("Review items before checkout.")).toBeInTheDocument();
+    expect(
+      screen.getByText("Review items before checkout."),
+    ).toBeInTheDocument();
   });
 
   it("calls clearCart when Clear button is clicked", () => {
     const { clearCart } = setup();
 
-    const clearBtn = screen.getByText(/clear/i)
-    fireEvent.click(clearBtn)
-    expect(clearCart).toHaveBeenCalled()
+    const clearBtn = screen.getByText(/clear/i);
+    fireEvent.click(clearBtn);
+    expect(clearCart).toHaveBeenCalled();
   });
 });

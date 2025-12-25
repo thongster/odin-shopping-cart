@@ -5,7 +5,7 @@ import CheckoutDone from "./CheckoutDone";
 
 const CartTotal = () => {
   const { cart } = useOutletContext();
-  const [isCheckout, setIsCheckout] = useState(false)
+  const [isCheckout, setIsCheckout] = useState(false);
 
   const subtotal = Number(
     cart
@@ -44,7 +44,12 @@ const CartTotal = () => {
               <span>${total}</span>
             </div>
 
-            <button className={styles.checkoutBtn} onClick={() => setIsCheckout(true)}>Checkout</button>
+            <button
+              className={styles.checkoutBtn}
+              onClick={() => setIsCheckout(true)}
+            >
+              Checkout
+            </button>
 
             {isCheckout && <CheckoutDone />}
           </div>

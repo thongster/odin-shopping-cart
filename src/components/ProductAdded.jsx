@@ -1,11 +1,7 @@
-import styles from './ProductAdded.module.css'
+import styles from "./ProductAdded.module.css";
 
 const ProductAdded = () => {
-  return (
-    <div className={styles.productAdded}>
-      something here
-    </div>
-  )
-}
+  return <div className={styles.productAdded}>something here</div>;
+};
 
-export default ProductAdded
+export default ProductAdded;

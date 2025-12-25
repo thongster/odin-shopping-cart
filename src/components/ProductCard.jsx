@@ -2,10 +2,12 @@ import { useOutletContext } from "react-router";
 import { useState } from "react";
 import styles from "./ProductCard.module.css";
 import CountCtrl from "./CountCtrl";
+import ProductAdded from "./ProductAdded";
 
 const ProductCard = ({ item }) => {
   const { addToCart } = useOutletContext();
   const [count, setCount] = useState(0);
+  const [isAdded, setIsAdded] = useState(false);
 
   const handleSubmit = (e, product) => {
     e.preventDefault();
@@ -24,6 +26,10 @@ const ProductCard = ({ item }) => {
     addToCart(cartItem);
   };
 
+  const onAdd = () => {
+    
+  }
+
   return (
     <div className={styles.shopItem}>
       <img src={item.image} alt={item.title} />
@@ -37,6 +43,8 @@ const ProductCard = ({ item }) => {
           </button>
         </form>
       </div>
+      {/* {isAdded && <ProductAdded />} */}
+      <ProductAdded />
     </div>
   );
 };

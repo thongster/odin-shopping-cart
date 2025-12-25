@@ -19,38 +19,38 @@ describe("CountCtrl", () => {
     expect(screen.getByLabelText("Quantity")).toBeInTheDocument();
   });
 
-    it("calls onChange with count + 1 when + button is clicked", () => {
+  it("calls onChange with count + 1 when + button is clicked", () => {
     const { onChange } = setup(2);
 
     const plusButton = screen.getByText("+");
     fireEvent.click(plusButton);
-    
-    expect(onChange).toHaveBeenCalledWith(3)
+
+    expect(onChange).toHaveBeenCalledWith(3);
   });
 
-    it("calls onChange with count - 1 when - button is clicked", () => {
+  it("calls onChange with count - 1 when - button is clicked", () => {
     const { onChange } = setup(2);
 
     const minusButton = screen.getByText("-");
     fireEvent.click(minusButton);
 
-    expect(onChange).toHaveBeenCalledWith(1)
+    expect(onChange).toHaveBeenCalledWith(1);
   });
 
-    it("does not call onChange when count is 0 and - is clicked", () => {
+  it("does not call onChange when count is 0 and - is clicked", () => {
     const { onChange } = setup(0);
 
     const minusButton = screen.getByText("-");
     fireEvent.click(minusButton);
 
-    expect(onChange).not.toHaveBeenCalled()
+    expect(onChange).not.toHaveBeenCalled();
   });
 
-    it("calls onChange when input value changes", () => {
+  it("calls onChange when input value changes", () => {
     const { onChange } = setup(1);
 
     const input = screen.getByLabelText(/quantity/i);
     fireEvent.change(input, { target: { value: "5" } });
-    expect(onChange).toHaveBeenCalledWith(5)
+    expect(onChange).toHaveBeenCalledWith(5);
   });
 });

@@ -8,9 +8,10 @@ The app is a store for a (fake) small streetwear storefront with a home page, sh
 
 This project helped me build upon and moved forward with basic React concepts and start "thinking in React" more. This includes considering states, props, not mutating states, getting more familiar with React rendering, structuring pages and reusable components. Very importantly, I had to consider testing throughout the entire app to ensure nothing breaks.
 
-It was also a chance to "flex"  and have a bit of fun through designing the website, all done with vanilla CSS.
+It was also a chance to "flex" and have a bit of fun through designing the website, all done with vanilla CSS.
 
-Features 
+Features
+
 - Multi-page layout using React Router
 - Home, Shop, and Cart pages
 - Product data fetched from an external API
@@ -22,6 +23,7 @@ Features
 - Fully styled with a cohesive “after dark” streetwear theme
 
 Tech used
+
 - React
 - React Router
 - Vite
