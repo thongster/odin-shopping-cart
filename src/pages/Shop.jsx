@@ -11,7 +11,7 @@ export default function Shop() {
 
     const timer = setTimeout(() => {
       setIsAdded(false);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [isAdded]);

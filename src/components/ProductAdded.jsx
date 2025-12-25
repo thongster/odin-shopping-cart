@@ -4,7 +4,8 @@ const ProductAdded = ({ isAdded }) => {
   console.log("isAdded:", isAdded);
   return (
     <div className={`${styles.productAdded} ${isAdded ? styles.show : ""}`}>
-      something here
+        <h4>Added to cart</h4>
+        <p>Item was added successfully</p>
     </div>
   );
 };
