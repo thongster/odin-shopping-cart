@@ -7,7 +7,7 @@ export default function Shop() {
   const [isAdded, setIsAdded] = useState(false);
 
   useEffect(() => {
-    if (!setIsAdded) return;
+    if (!isAdded) return;
 
     const timer = setTimeout(() => {
       setIsAdded(false);
@@ -20,7 +20,7 @@ export default function Shop() {
     <>
       <ShopHeader />
       <ShopGrid setIsAdded={setIsAdded} />
-      {isAdded && <ProductAdded isAdded={isAdded} />}
+      <ProductAdded isAdded={isAdded} />
     </>
   );
 }
