@@ -4,7 +4,7 @@ import styles from "./ShopGrid.module.css";
 import Loading from "./Loading.jsx";
 import Error from "./Error.jsx";
 
-const ShopGrid = () => {
+const ShopGrid = ({ setIsAdded }) => {
   const { products, error, loading } = useProducts();
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -13,7 +13,7 @@ const ShopGrid = () => {
       <div className={styles.containerInner}>
         <div className={styles.grid}>
           {products.map((item) => (
-            <ProductCard key={item.id} item={item} />
+            <ProductCard key={item.id} item={item} setIsAdded={setIsAdded} />
           ))}
         </div>
       </div>

@@ -1,13 +1,11 @@
 import { useOutletContext } from "react-router";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./ProductCard.module.css";
 import CountCtrl from "./CountCtrl";
-import ProductAdded from "./ProductAdded";
 
-const ProductCard = ({ item }) => {
+const ProductCard = ({ setIsAdded, item }) => {
   const { addToCart } = useOutletContext();
   const [count, setCount] = useState(0);
-  const [isAdded, setIsAdded] = useState(false);
 
   const handleSubmit = (e, product) => {
     e.preventDefault();
@@ -24,18 +22,8 @@ const ProductCard = ({ item }) => {
     };
 
     addToCart(cartItem);
-    setIsAdded(true)
+    setIsAdded(true);
   };
-
-  useEffect(() => {
-    if (!setIsAdded) return;
-
-    const timer = setTimeout(() => {
-      setIsAdded(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [isAdded]);
 
   return (
     <div className={styles.shopItem}>
@@ -45,12 +33,11 @@ const ProductCard = ({ item }) => {
       <div className={styles.form}>
         <form action="submit" onSubmit={(e) => handleSubmit(e, item)}>
           <CountCtrl count={count} onChange={setCount} />
-          <button type="submit" className={styles.cartBtn} onClick={() => onAdd()}>
+          <button type="submit" className={styles.cartBtn}>
             Add to Cart
           </button>
         </form>
       </div>
-      {isAdded && <ProductAdded isAdded={isAdded}/>}
     </div>
   );
 };
