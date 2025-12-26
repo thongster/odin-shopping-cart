@@ -1,18 +1,19 @@
 import styles from './softCta.module.css'
+import { NavLink } from 'react-router'
 
-const softCta = () => {
+const SoftCta = () => {
 
 
     return (
         <div className={styles.softCta}>
             <div className={styles.softCtaInner}>
                 <h3>Ready to find your next piece?</h3>
-                <a href="/shop" className={styles.softCtaButton}>
+                <NavLink to="shop" className={styles.softCtaButton}>
                 Shop the collection
-                </a>
+                </NavLink>
             </div>
         </div>
     )
 }
 
-export default softCta
+export default SoftCta
