@@ -13,15 +13,15 @@ const SoftCta = () => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    div.style.set("--x", x);
-    div.style.set("--y", y);
+    div.style.setProperty("--x", `${x}px`);
+    div.style.setProperty("--y", `${y}px`);
   };
 
   return (
     <div
       ref={ctaRef}
       className={styles.softCta}
-      onMouseMove={() => handleMouseMove()}
+      onMouseMove={handleMouseMove}
     >
       <div className={styles.softCtaInner}>
         <h3>Ready to find your next piece?</h3>
