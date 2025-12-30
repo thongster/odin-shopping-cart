@@ -1,7 +1,22 @@
 import styles from "./Hero.module.css";
 import { Link } from "react-router";
+import { useRef } from "react";
 
 export default function Hero() {
+  const ctaRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const div = ctaRef.current;
+    if (!div) return;
+
+    const rect = div.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    div.style.setProperty("--x", `${x}px`);
+    div.style.setProperty("--y", `${y}px`);
+  };
+
   return (
     <div className={styles.hero}>
       <div className={styles.heroContent}>
