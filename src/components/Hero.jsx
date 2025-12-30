@@ -18,7 +18,7 @@ export default function Hero() {
   };
 
   return (
-    <div className={styles.hero}>
+    <div ref={ctaRef} className={styles.hero} onMouseMove={handleMouseMove}>
       <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>Streetwear, after dark.</h1>
         <p className={styles.heroSubtitle}>
