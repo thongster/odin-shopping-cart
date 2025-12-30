@@ -18,11 +18,7 @@ const SoftCta = () => {
   };
 
   return (
-    <div
-      ref={ctaRef}
-      className={styles.softCta}
-      onMouseMove={handleMouseMove}
-    >
+    <div ref={ctaRef} className={styles.softCta} onMouseMove={handleMouseMove}>
       <div className={styles.softCtaInner}>
         <h3>Ready to find your next piece?</h3>
         <NavLink to="shop" className={styles.softCtaButton}>
